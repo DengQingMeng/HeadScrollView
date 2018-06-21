@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EADC818620DB46F100010693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC818520DB46F100010693 /* AppDelegate.swift */; };
+		EADC818820DB46F100010693 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC818720DB46F100010693 /* ViewController.swift */; };
+		EADC818B20DB46F100010693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADC818920DB46F100010693 /* Main.storyboard */; };
+		EADC818D20DB46F300010693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADC818C20DB46F300010693 /* Assets.xcassets */; };
+		EADC819020DB46F300010693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADC818E20DB46F300010693 /* LaunchScreen.storyboard */; };
+		EADC819B20DB46F300010693 /* HeadScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC819A20DB46F300010693 /* HeadScrollViewTests.swift */; };
+		EADC81A620DB46F300010693 /* HeadScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81A520DB46F300010693 /* HeadScrollViewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EADC819720DB46F300010693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EADC817A20DB46F100010693 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EADC818120DB46F100010693;
+			remoteInfo = HeadScrollView;
+		};
+		EADC81A220DB46F300010693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EADC817A20DB46F100010693 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EADC818120DB46F100010693;
+			remoteInfo = HeadScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EADC818220DB46F100010693 /* HeadScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADC818520DB46F100010693 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EADC818720DB46F100010693 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EADC818A20DB46F100010693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EADC818C20DB46F300010693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EADC818F20DB46F300010693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EADC819120DB46F300010693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADC819620DB46F300010693 /* HeadScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADC819A20DB46F300010693 /* HeadScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewTests.swift; sourceTree = "<group>"; };
+		EADC819C20DB46F300010693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADC81A120DB46F300010693 /* HeadScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADC81A520DB46F300010693 /* HeadScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewUITests.swift; sourceTree = "<group>"; };
+		EADC81A720DB46F300010693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EADC817F20DB46F100010693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819320DB46F300010693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819E20DB46F300010693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EADC817920DB46F100010693 = {
+			isa = PBXGroup;
+			children = (
+				EADC818420DB46F100010693 /* HeadScrollView */,
+				EADC819920DB46F300010693 /* HeadScrollViewTests */,
+				EADC81A420DB46F300010693 /* HeadScrollViewUITests */,
+				EADC818320DB46F100010693 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EADC818320DB46F100010693 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EADC818220DB46F100010693 /* HeadScrollView.app */,
+				EADC819620DB46F300010693 /* HeadScrollViewTests.xctest */,
+				EADC81A120DB46F300010693 /* HeadScrollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EADC818420DB46F100010693 /* HeadScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EADC818520DB46F100010693 /* AppDelegate.swift */,
+				EADC818720DB46F100010693 /* ViewController.swift */,
+				EADC818920DB46F100010693 /* Main.storyboard */,
+				EADC818C20DB46F300010693 /* Assets.xcassets */,
+				EADC818E20DB46F300010693 /* LaunchScreen.storyboard */,
+				EADC819120DB46F300010693 /* Info.plist */,
+			);
+			path = HeadScrollView;
+			sourceTree = "<group>";
+		};
+		EADC819920DB46F300010693 /* HeadScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EADC819A20DB46F300010693 /* HeadScrollViewTests.swift */,
+				EADC819C20DB46F300010693 /* Info.plist */,
+			);
+			path = HeadScrollViewTests;
+			sourceTree = "<group>";
+		};
+		EADC81A420DB46F300010693 /* HeadScrollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EADC81A520DB46F300010693 /* HeadScrollViewUITests.swift */,
+				EADC81A720DB46F300010693 /* Info.plist */,
+			);
+			path = HeadScrollViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EADC818120DB46F100010693 /* HeadScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EADC81AA20DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollView" */;
+			buildPhases = (
+				EADC817E20DB46F100010693 /* Sources */,
+				EADC817F20DB46F100010693 /* Frameworks */,
+				EADC818020DB46F100010693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadScrollView;
+			productName = HeadScrollView;
+			productReference = EADC818220DB46F100010693 /* HeadScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EADC819520DB46F300010693 /* HeadScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EADC81AD20DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollViewTests" */;
+			buildPhases = (
+				EADC819220DB46F300010693 /* Sources */,
+				EADC819320DB46F300010693 /* Frameworks */,
+				EADC819420DB46F300010693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EADC819820DB46F300010693 /* PBXTargetDependency */,
+			);
+			name = HeadScrollViewTests;
+			productName = HeadScrollViewTests;
+			productReference = EADC819620DB46F300010693 /* HeadScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EADC81A020DB46F300010693 /* HeadScrollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EADC81B020DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollViewUITests" */;
+			buildPhases = (
+				EADC819D20DB46F300010693 /* Sources */,
+				EADC819E20DB46F300010693 /* Frameworks */,
+				EADC819F20DB46F300010693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EADC81A320DB46F300010693 /* PBXTargetDependency */,
+			);
+			name = HeadScrollViewUITests;
+			productName = HeadScrollViewUITests;
+			productReference = EADC81A120DB46F300010693 /* HeadScrollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EADC817A20DB46F100010693 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = AndyDeng;
+				TargetAttributes = {
+					EADC818120DB46F100010693 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					EADC819520DB46F300010693 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = EADC818120DB46F100010693;
+					};
+					EADC81A020DB46F300010693 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = EADC818120DB46F100010693;
+					};
+				};
+			};
+			buildConfigurationList = EADC817D20DB46F100010693 /* Build configuration list for PBXProject "HeadScrollView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EADC817920DB46F100010693;
+			productRefGroup = EADC818320DB46F100010693 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EADC818120DB46F100010693 /* HeadScrollView */,
+				EADC819520DB46F300010693 /* HeadScrollViewTests */,
+				EADC81A020DB46F300010693 /* HeadScrollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EADC818020DB46F100010693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADC819020DB46F300010693 /* LaunchScreen.storyboard in Resources */,
+				EADC818D20DB46F300010693 /* Assets.xcassets in Resources */,
+				EADC818B20DB46F100010693 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819420DB46F300010693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819F20DB46F300010693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EADC817E20DB46F100010693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADC818820DB46F100010693 /* ViewController.swift in Sources */,
+				EADC818620DB46F100010693 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819220DB46F300010693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADC819B20DB46F300010693 /* HeadScrollViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADC819D20DB46F300010693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADC81A620DB46F300010693 /* HeadScrollViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EADC819820DB46F300010693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EADC818120DB46F100010693 /* HeadScrollView */;
+			targetProxy = EADC819720DB46F300010693 /* PBXContainerItemProxy */;
+		};
+		EADC81A320DB46F300010693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EADC818120DB46F100010693 /* HeadScrollView */;
+			targetProxy = EADC81A220DB46F300010693 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EADC818920DB46F100010693 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EADC818A20DB46F100010693 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EADC818E20DB46F300010693 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EADC818F20DB46F300010693 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EADC81A820DB46F300010693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EADC81A920DB46F300010693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EADC81AB20DB46F300010693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EADC81AC20DB46F300010693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EADC81AE20DB46F300010693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadScrollView.app/HeadScrollView";
+			};
+			name = Debug;
+		};
+		EADC81AF20DB46F300010693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeadScrollView.app/HeadScrollView";
+			};
+			name = Release;
+		};
+		EADC81B120DB46F300010693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadScrollView;
+			};
+			name = Debug;
+		};
+		EADC81B220DB46F300010693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HeadScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zhongtian.HeadScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HeadScrollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EADC817D20DB46F100010693 /* Build configuration list for PBXProject "HeadScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADC81A820DB46F300010693 /* Debug */,
+				EADC81A920DB46F300010693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EADC81AA20DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADC81AB20DB46F300010693 /* Debug */,
+				EADC81AC20DB46F300010693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EADC81AD20DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADC81AE20DB46F300010693 /* Debug */,
+				EADC81AF20DB46F300010693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EADC81B020DB46F300010693 /* Build configuration list for PBXNativeTarget "HeadScrollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EADC81B120DB46F300010693 /* Debug */,
+				EADC81B220DB46F300010693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EADC817A20DB46F100010693 /* Project object */;
+}
