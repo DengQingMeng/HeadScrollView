@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         button.frame = CGRect.init(x: 20, y: 20, width: 100, height: 100)
         button.backgroundColor = UIColor.yellow
         button.addTarget(self, action: #selector(ViewController.buttonPressed), for: .touchUpInside)
+        button.setTitle("click", for: .normal)
         self.view.addSubview(button)
     }
 
@@ -27,7 +28,13 @@ class ViewController: UIViewController {
     }
 
     @objc func buttonPressed() {
-       
+        let mainViewController = MainViewController()
+        let nav = UINavigationController.init(rootViewController: mainViewController)
+        self.present(nav, animated: true) {
+            
+        }
+        
+        
     }
 }
 

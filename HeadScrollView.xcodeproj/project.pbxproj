@@ -14,6 +14,9 @@
 		EADC819020DB46F300010693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADC818E20DB46F300010693 /* LaunchScreen.storyboard */; };
 		EADC819B20DB46F300010693 /* HeadScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC819A20DB46F300010693 /* HeadScrollViewTests.swift */; };
 		EADC81A620DB46F300010693 /* HeadScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81A520DB46F300010693 /* HeadScrollViewUITests.swift */; };
+		EADC81B420DB4C6E00010693 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B320DB4C6E00010693 /* MainViewController.swift */; };
+		EADC81B620DB4D7D00010693 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B520DB4D7D00010693 /* NewsViewController.swift */; };
+		EADC81B820DB4DBA00010693 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B720DB4DBA00010693 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		EADC81A120DB46F300010693 /* HeadScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADC81A520DB46F300010693 /* HeadScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadScrollViewUITests.swift; sourceTree = "<group>"; };
 		EADC81A720DB46F300010693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADC81B320DB4C6E00010693 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EADC81B520DB4D7D00010693 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		EADC81B720DB4DBA00010693 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				EADC818C20DB46F300010693 /* Assets.xcassets */,
 				EADC818E20DB46F300010693 /* LaunchScreen.storyboard */,
 				EADC819120DB46F300010693 /* Info.plist */,
+				EADC81B320DB4C6E00010693 /* MainViewController.swift */,
+				EADC81B520DB4D7D00010693 /* NewsViewController.swift */,
+				EADC81B720DB4DBA00010693 /* DetailViewController.swift */,
 			);
 			path = HeadScrollView;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADC81B420DB4C6E00010693 /* MainViewController.swift in Sources */,
 				EADC818820DB46F100010693 /* ViewController.swift in Sources */,
+				EADC81B820DB4DBA00010693 /* DetailViewController.swift in Sources */,
 				EADC818620DB46F100010693 /* AppDelegate.swift in Sources */,
+				EADC81B620DB4D7D00010693 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
