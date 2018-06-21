@@ -23,46 +23,17 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         self.view.backgroundColor = UIColor.white
         self.title = "网易新闻"
         
-        
-        //        firstViewController = FirstViewController()
-        //        self.addChildViewController(firstViewController)
-        //        firstViewController.view.frame = CGRect.init(x: 0, y: 0, width: 100, height: 200)
-        //        self.view.addSubview(firstViewController.view)
-        //        currentController = firstViewController
-        //
-        //        secondViewController = SecondViewController()
-        ////        self.addChildViewController(secondViewController)
-        //        secondViewController.view.frame = CGRect.init(x: 100, y: 0, width: 100, height: 200)
-        ////        self.view.addSubview(secondViewController.view)
-        //
-        //        print(self.childViewControllers)
-        //
-        //        let button = UIButton.init(type: .custom)
-        //        button.frame = CGRect.init(x: 210, y: 70, width: 20, height: 20)
-        //        button.backgroundColor = UIColor.red
-        //        button.addTarget(self, action: #selector(MainViewController.buttonPressed), for: .touchUpInside)
-        //        self.view.addSubview(button)
-        //
-        //        for viewController in self.childViewControllers {
-        //            if viewController is FirstViewController {
-        //                print(1)
-        //            }
-        //            else if viewController is SecondViewController {
-        //                print(2)
-        //            }
-        //        }
-        
         // HeadView
         let headArray = ["头条","娱乐","体育","财经","科技","NBA","手机", "数码"]
         let count = headArray.count
         headScrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 64, width: self.view.bounds.size.width, height: 44))
-        headScrollView.contentSize = CGSize.init(width: 10+count*10+count*50, height: 44)
+        headScrollView.contentSize = CGSize.init(width: Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth, height: 44)
         headScrollView.showsHorizontalScrollIndicator = false
         self.view.addSubview(headScrollView)
         for i in 0 ..< headArray.count {
             let item = headArray[i]
             let itemButton = UIButton.init(type: .custom)
-            itemButton.frame = CGRect.init(x: 10 + i*10 + i*50, y: 0, width: 50, height: 40)
+            itemButton.frame = CGRect.init(x: Gap + CGFloat(i)*Gap + CGFloat(i)*ItemWidth, y: 0, width: ItemWidth, height: 40)
             itemButton.setTitle(item, for: .normal)
             itemButton.backgroundColor = UIColor.lightGray
             itemButton.layer.cornerRadius = 6
@@ -71,7 +42,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
             headScrollView.addSubview(itemButton)
         }
         
-        indicateView = UIView.init(frame: CGRect.init(x: 10, y: 42, width: 50, height: 2))
+        indicateView = UIView.init(frame: CGRect.init(x: Gap, y: 42, width: ItemWidth, height: 2))
         indicateView.backgroundColor = UIColor.blue
         headScrollView.addSubview(indicateView)
         
@@ -113,18 +84,18 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         bgScrollView.scrollRectToVisible(CGRect.init(x: CGFloat(tag)*self.view.bounds.size.width, y: 108, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108), animated: false)
         
         UIView.animate(withDuration: 0.1, animations: {
-            self.indicateView.frame = CGRect.init(x: 10 + 60*tag, y: 42, width: 50, height: 2)
+            self.indicateView.frame = CGRect.init(x: Gap + (Gap + ItemWidth)*CGFloat(tag), y: 42, width: ItemWidth, height: 2)
         }) { (finish) in
             self.isScroll = true
         }
         
-        let orginX: CGFloat = 10 + CGFloat(tag*60)
-        let width: CGFloat = 60.0
-        if orginX + width + 60 > self.view.frame.size.width {
-            headScrollView.setContentOffset(CGPoint.init(x: orginX + width + 60 - self.view.frame.size.width, y: 0), animated: true)
+        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
+        let width: CGFloat = Gap + ItemWidth
+        if orginX + width + width > self.view.frame.size.width {
+            headScrollView.setContentOffset(CGPoint.init(x: orginX + width + width - self.view.frame.size.width, y: 0), animated: true)
         }
-        else if orginX - 60 < 0 {
-            headScrollView.setContentOffset(CGPoint.init(x: orginX-60, y: 0), animated: true)
+        else if orginX - width < 0 {
+            headScrollView.setContentOffset(CGPoint.init(x: orginX-width, y: 0), animated: true)
         }
         
     }
@@ -133,7 +104,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         if isScroll {
             let offset = scrollView.contentOffset.x
             print(offset)
-            self.indicateView.frame = CGRect.init(x: 10 + (offset/self.view.frame.size.width)*60, y: 42, width: 50, height: 2)
+            self.indicateView.frame = CGRect.init(x: Gap + (offset/self.view.frame.size.width)*(Gap + ItemWidth), y: 42, width: ItemWidth, height: 2)
         }
     }
     

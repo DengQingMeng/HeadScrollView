@@ -17,6 +17,7 @@
 		EADC81B420DB4C6E00010693 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B320DB4C6E00010693 /* MainViewController.swift */; };
 		EADC81B620DB4D7D00010693 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B520DB4D7D00010693 /* NewsViewController.swift */; };
 		EADC81B820DB4DBA00010693 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B720DB4DBA00010693 /* DetailViewController.swift */; };
+		EADC81BA20DB819C00010693 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC81B920DB819C00010693 /* Macro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EADC81B320DB4C6E00010693 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EADC81B520DB4D7D00010693 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		EADC81B720DB4DBA00010693 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EADC81B920DB819C00010693 /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				EADC81B320DB4C6E00010693 /* MainViewController.swift */,
 				EADC81B520DB4D7D00010693 /* NewsViewController.swift */,
 				EADC81B720DB4DBA00010693 /* DetailViewController.swift */,
+				EADC81B920DB819C00010693 /* Macro.swift */,
 			);
 			path = HeadScrollView;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				EADC818820DB46F100010693 /* ViewController.swift in Sources */,
 				EADC81B820DB4DBA00010693 /* DetailViewController.swift in Sources */,
 				EADC818620DB46F100010693 /* AppDelegate.swift in Sources */,
+				EADC81BA20DB819C00010693 /* Macro.swift in Sources */,
 				EADC81B620DB4D7D00010693 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
