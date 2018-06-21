@@ -63,20 +63,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
-    //    @objc func buttonPressed() {
-    //        self.addChildViewController(self.secondViewController)
-    //        self.transition(from: firstViewController, to: secondViewController, duration: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: {
-    //
-    //        }) { (finished) in
-    //            self.secondViewController.didMove(toParentViewController: self)
-    //            self.firstViewController.willMove(toParentViewController: nil)
-    //            self.firstViewController.removeFromParentViewController()
-    //            self.currentController = self.secondViewController
-    //            print(self.childViewControllers)
-    //
-    //        }
-    //
-    //    }
     
     @objc func itemButtonPressed(sender: UIButton) {
         isScroll = false
@@ -89,13 +75,17 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
             self.isScroll = true
         }
         
-        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
+        let itemButton = headScrollView.viewWithTag(sender.tag)
+        let relativeRect = itemButton?.convert(headScrollView.frame, to: self.view)
+        
+//        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
+        let orginX: CGFloat = relativeRect!.origin.x
         let width: CGFloat = Gap + ItemWidth
         if orginX + width + width > self.view.frame.size.width {
-            headScrollView.setContentOffset(CGPoint.init(x: orginX + width + width - self.view.frame.size.width, y: 0), animated: true)
+            headScrollView.setContentOffset(CGPoint.init(x: itemButton!.frame.origin.x + width + width - self.view.frame.size.width, y: 0), animated: true)
         }
         else if orginX - width < 0 {
-            headScrollView.setContentOffset(CGPoint.init(x: orginX-width, y: 0), animated: true)
+            headScrollView.setContentOffset(CGPoint.init(x: headScrollView.contentOffset.x+orginX-width-Gap, y: 0), animated: true)
         }
         
     }
