@@ -16,6 +16,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     var headScrollView: UIScrollView!
     var indicateView: UIView!
     var isScroll = true
+    var count: NSInteger = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         
         // HeadView
         let headArray = ["头条","娱乐","体育","财经","科技","NBA","手机", "数码"]
-        let count = headArray.count
+        count = headArray.count
         headScrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 64, width: self.view.bounds.size.width, height: 44))
         headScrollView.contentSize = CGSize.init(width: Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth, height: 44)
         headScrollView.showsHorizontalScrollIndicator = false
@@ -81,11 +83,23 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 //        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
         let orginX: CGFloat = relativeRect!.origin.x
         let width: CGFloat = Gap + ItemWidth
+        // 往右点
         if orginX + width + width > self.view.frame.size.width {
-            headScrollView.setContentOffset(CGPoint.init(x: itemButton!.frame.origin.x + width + width - self.view.frame.size.width, y: 0), animated: true)
+            if itemButton!.frame.origin.x + width + width - self.view.frame.size.width > (Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth - self.view.frame.size.width) {
+                headScrollView.setContentOffset(CGPoint.init(x: Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth - self.view.frame.size.width, y: 0), animated: true)
+            }
+            else {
+                headScrollView.setContentOffset(CGPoint.init(x: itemButton!.frame.origin.x + width + width - self.view.frame.size.width, y: 0), animated: true)
+            }
         }
         else if orginX - width < 0 {
-            headScrollView.setContentOffset(CGPoint.init(x: headScrollView.contentOffset.x+orginX-width-Gap, y: 0), animated: true)
+            // 往左点
+            if headScrollView.contentOffset.x+orginX-width-Gap < 0 {
+                headScrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+            }
+            else {
+                headScrollView.setContentOffset(CGPoint.init(x: headScrollView.contentOffset.x+orginX-width-Gap, y: 0), animated: true)
+            }
         }
         
     }
