@@ -18,12 +18,16 @@ class NewsViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         
-        let button = UIButton.init(type: .custom)
-        button.frame = CGRect.init(x: 10, y: 70, width: 50, height: 50)
-        button.backgroundColor = UIColor.red
-        button.addTarget(self, action: #selector(NewsViewController.buttonPressed), for: .touchUpInside)
-        button.setTitle(dispalyString, for: .normal)
-        self.view.addSubview(button)
+//        let button = UIButton.init(type: .custom)
+//        button.frame = CGRect.init(x: 10, y: 70, width: 50, height: 50)
+//        button.backgroundColor = UIColor.red
+//        button.addTarget(self, action: #selector(NewsViewController.buttonPressed), for: .touchUpInside)
+//        button.setTitle(dispalyString, for: .normal)
+//        self.view.addSubview(button)
+        
+        let bgImageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108))
+        bgImageView.image = UIImage.init(named: "IMG_" + "\(index)")
+        self.view.addSubview(bgImageView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

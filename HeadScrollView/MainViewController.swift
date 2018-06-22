@@ -22,10 +22,10 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.title = "网易新闻"
+        self.title = "腾讯新闻"
         
         // HeadView
-        let headArray = ["头条","娱乐","体育","财经","科技","NBA","手机", "数码", "汽车", "时尚", "电影", "游戏", "房产"]
+        let headArray = ["要闻","娱乐","体育","军事","NBA","科技", "财经", "汽车", "时尚", "电影", "游戏", "房产"]
         count = headArray.count
         headScrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 64, width: self.view.bounds.size.width, height: 44))
         headScrollView.contentSize = CGSize.init(width: Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth, height: 44)
@@ -56,7 +56,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         
         for i in 0 ..< headArray.count {
             let newsViewController = NewsViewController()
-            newsViewController.index = i
+            newsViewController.index = i + 1
             newsViewController.dispalyString = headArray[i]
             self.addChildViewController(newsViewController)
             newsViewController.view.frame = CGRect.init(x: CGFloat(i)*self.view.bounds.size.width, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108)
