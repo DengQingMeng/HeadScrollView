@@ -11,7 +11,7 @@ import UIKit
 
 class NewsViewController: UIViewController {
     var index = 0
-    
+    var dispalyString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +22,7 @@ class NewsViewController: UIViewController {
         button.frame = CGRect.init(x: 10, y: 70, width: 50, height: 50)
         button.backgroundColor = UIColor.red
         button.addTarget(self, action: #selector(NewsViewController.buttonPressed), for: .touchUpInside)
-        button.setTitle("\(index)", for: .normal)
+        button.setTitle(dispalyString, for: .normal)
         self.view.addSubview(button)
     }
     

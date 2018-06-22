@@ -57,7 +57,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         for i in 0 ..< headArray.count {
             let newsViewController = NewsViewController()
             newsViewController.index = i
-            
+            newsViewController.dispalyString = headArray[i]
             self.addChildViewController(newsViewController)
             newsViewController.view.frame = CGRect.init(x: CGFloat(i)*self.view.bounds.size.width, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108)
             bgScrollView.addSubview(newsViewController.view)
@@ -76,8 +76,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         }) { (finish) in
 
         }
-        
-        let itemButton = headScrollView.viewWithTag(sender.tag)
+        self.headItemCoverDisplayAnimation(tag: sender.tag)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.x
+//        print(offset)
+        self.indicateView.frame = CGRect.init(x: Gap + (offset/self.view.frame.size.width)*(Gap + ItemWidth), y: 42, width: ItemWidth, height: 2)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageWidth = self.view.frame.size.width
+        let currentPage = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
+        print(currentPage)
+        let tag = Int(currentPage) + 1000
+        self.headItemCoverDisplayAnimation(tag: tag)
+    }
+    
+    func headItemCoverDisplayAnimation(tag: Int) {
+        let itemButton = headScrollView.viewWithTag(tag)
         let relativeRect = itemButton?.convert(headScrollView.frame, to: self.view)
         
         //        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
@@ -101,21 +118,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
                 headScrollView.setContentOffset(CGPoint.init(x: headScrollView.contentOffset.x+orginX-width-Gap, y: 0), animated: true)
             }
         }
-        
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.x
-        print(offset)
-        self.indicateView.frame = CGRect.init(x: Gap + (offset/self.view.frame.size.width)*(Gap + ItemWidth), y: 42, width: ItemWidth, height: 2)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-    }
-    
-    //    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-    //
-    //    }
     
 }
