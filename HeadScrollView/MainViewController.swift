@@ -15,7 +15,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     var bgScrollView: UIScrollView!
     var headScrollView: UIScrollView!
     var indicateView: UIView!
-    var isScroll = true
     var count: NSInteger = 0
     
     override func viewDidLoad() {
@@ -26,7 +25,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         self.title = "网易新闻"
         
         // HeadView
-        let headArray = ["头条","娱乐","体育","财经","科技","NBA","手机", "数码"]
+        let headArray = ["头条","娱乐","体育","财经","科技","NBA","手机", "数码", "汽车", "时尚", "电影", "游戏", "房产"]
         count = headArray.count
         headScrollView = UIScrollView.init(frame: CGRect.init(x: 0, y: 64, width: self.view.bounds.size.width, height: 44))
         headScrollView.contentSize = CGSize.init(width: Gap + CGFloat(count)*Gap+CGFloat(count)*ItemWidth, height: 44)
@@ -63,24 +62,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
             newsViewController.view.frame = CGRect.init(x: CGFloat(i)*self.view.bounds.size.width, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108)
             bgScrollView.addSubview(newsViewController.view)
         }
-        
     }
     
     @objc func itemButtonPressed(sender: UIButton) {
-        isScroll = false
         let tag = sender.tag - 1000
-        bgScrollView.scrollRectToVisible(CGRect.init(x: CGFloat(tag)*self.view.bounds.size.width, y: 108, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108), animated: false)
+        //        bgScrollView.scrollRectToVisible(CGRect.init(x: CGFloat(tag)*self.view.bounds.size.width, y: 108, width: self.view.bounds.size.width, height: self.view.bounds.size.height-108), animated: false)
+        //        bgScrollView.setContentOffset(CGPoint.init(x: CGFloat(tag)*self.view.bounds.size.width, y: 0), animated: false)
+        // 用这个方法能使 scrollViewDidScroll 不触发
+        bgScrollView.bounds.origin = CGPoint(x: CGFloat(tag)*self.view.bounds.size.width, y: 0)
         
         UIView.animate(withDuration: 0.1, animations: {
             self.indicateView.frame = CGRect.init(x: Gap + (Gap + ItemWidth)*CGFloat(tag), y: 42, width: ItemWidth, height: 2)
         }) { (finish) in
-            self.isScroll = true
+
         }
         
         let itemButton = headScrollView.viewWithTag(sender.tag)
         let relativeRect = itemButton?.convert(headScrollView.frame, to: self.view)
         
-//        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
+        //        let orginX: CGFloat = Gap + CGFloat(tag)*(Gap + ItemWidth)
         let orginX: CGFloat = relativeRect!.origin.x
         let width: CGFloat = Gap + ItemWidth
         // 往右点
@@ -105,11 +105,9 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if isScroll {
-            let offset = scrollView.contentOffset.x
-            print(offset)
-            self.indicateView.frame = CGRect.init(x: Gap + (offset/self.view.frame.size.width)*(Gap + ItemWidth), y: 42, width: ItemWidth, height: 2)
-        }
+        let offset = scrollView.contentOffset.x
+        print(offset)
+        self.indicateView.frame = CGRect.init(x: Gap + (offset/self.view.frame.size.width)*(Gap + ItemWidth), y: 42, width: ItemWidth, height: 2)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
